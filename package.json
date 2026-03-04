@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node -e \"if(parseInt(process.versions.node) < 18) { console.error('\\n\\x1b[31m[ERROR] Node v14 detected. Next.js 16 requires v18+.\\x1b[0m\\n\\x1b[33m[FIX] Please run: .\\\\start-dev.bat\\x1b[0m\\n'); process.exit(1); }\" && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
